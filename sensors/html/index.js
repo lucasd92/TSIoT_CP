@@ -49,5 +49,9 @@ app.get('/imagen.png', function(req, res) {
 
 } )
 
+app.get('/multiply', function(req, res) {
+   res.sendFile('multiply.html', { root: __dirname }); console.log('multiply');
+} )
+
 app.listen(httpPort, () => console.log(`App listening on port ${httpPort}!`))
 

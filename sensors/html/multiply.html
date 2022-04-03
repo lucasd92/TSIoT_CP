@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page Multiply</title>
+</head>
+<body>
+    <h1>Multiply number A by B</h1>
+    <form id="multiply" method="POST" action="multiply">
+        <div>        
+            <label>A:</label>
+            <input type="text" id="a" name="a">
+        </div> 
+        <div> 
+            <label>B:</label>
+            <input type="text" id="b" name="b">
+        </div>
+        <input type="button" value='calculate' id='calculate' onclick="multiply();">
+    </form>
+    <h2 id="result"></h2>
+</body>
+
+<script>   
+    function multiply() {
+    
+        var A = document.getElementById("a").value;
+        var B = document.getElementById("b").value;
+    
+        document.getElementById("result").innerHTML=
+            "The result of multiplying " + A + " by " + B + " is " +A*B;
+    }
+</script>
+
+</html>
